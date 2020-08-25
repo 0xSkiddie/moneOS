@@ -1,0 +1,22 @@
+The trashOS bootloader contains a small library of functions that can be called and used from within the main bootloader file, or any other file that is a part of the bootloader. This text document contains a small description of all the functions.
+
+print:
+	The "print" function prints a string.
+	Note: The string must end with a null byte character, e.g.
+	example_string: db 'my_string', 0
+
+	Arguments:
+		si: pointer to the string
+
+print_hex:
+	The "print_hex" function prints a hex number.
+	Note: The maximum number of hex digits supported is four. If a hex number longer than four digits is provided, it will print the last four digits. This function is potentially insecure.
+
+	Arguments:
+		dx: containing the value of the hex number to be printed
+
+calc_len:
+	The "calc_len" function prints the "length", i.e. the number of characters present in a string in hexadecimal; it stores the result in the "cx" register.
+
+	Arguments:
+		bx: pointer to the string
