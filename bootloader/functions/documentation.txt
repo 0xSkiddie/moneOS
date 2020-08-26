@@ -14,9 +14,22 @@ print_hex:
 
 	Arguments:
 		dx: containing the value of the hex number to be printed
+		
+print_nl:
+	The "print_nl" function prints a new line.
+	
+	Arguments:
+		No arguments are required for this function
 
 calc_len:
 	The "calc_len" function prints the "length", i.e. the number of characters present in a string in hexadecimal; it stores the result in the "cx" register.
 
 	Arguments:
 		bx: pointer to the string
+		
+find_string:
+	The "find_string" function searches the memory for a single string that is provided.
+	Note: This function only searches the first 64 KiB of memory, from address 0x0000 to 0xffff.
+	
+	Arguments:
+		si: pointer to the string
